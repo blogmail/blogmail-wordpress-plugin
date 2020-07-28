@@ -1,0 +1,27 @@
+{
+  "name": "blogmail/blogmail-wordpress-plugin",
+  "description": "WordPress plugin for blogmail",
+  "keywords": [
+    "wordpress",
+    "blogmail",
+    "newsletter"
+  ],
+  "homepage": "https://blogmail.co/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Brenden Matthews",
+      "email": "brenden@brndn.io"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=5.4.0",
+    "composer/installers": "v1.2.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.0.2",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+    "wp-coding-standards/wpcs": "^0.14.0"
+  }
+}
