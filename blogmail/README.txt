@@ -29,9 +29,15 @@ will be `https://<your-site-url>/?feed=rss`.
 
 == Screenshots ==
 
+1. Example WordPress site.
+2. Admin panel.
+
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+= 1.0.1 =
+* Minor deployment fixes.
 
 = 1.0.0 =
 * Initial release.
