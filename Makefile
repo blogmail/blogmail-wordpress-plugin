@@ -10,7 +10,7 @@ setup-tests:
 
 test:
 	phpunit
-	yarn test
+	# yarn test
 
 run:
 	docker-compose up --build -d
@@ -33,6 +33,6 @@ activate:
 	# yarn run build
 
 dist:
-	yarn run build
+	# yarn run build
 	rm -f blogmail.zip
 	zip -r blogmail.zip blogmail
