@@ -108,7 +108,7 @@ class Blogmail_Public {
 	 * @since     3.0
 	 * @return    string    The new comment text.
 	 */
-	public function blogmail_template($content) {
+	public function blogmail_template( $content ) {
 		global $post;
 
 		echo $content;

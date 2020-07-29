@@ -20,19 +20,23 @@ if ( get_option( 'blogmail_newsletter_id' ) ) {
 ?>
     <div class="blogmail" style="margin-bottom: 0px;">
       <script type="application/json">
-        <?php echo json_encode([
-          'newsletterId' => $newsletter_id,
-          'classes' => [
-            'a' => 'blogmail-a',
-            'form' => 'blogmail-form',
-            'formDiv' => 'blogmail-formDiv',
-            'label' => 'blogmail-label',
-            'subscribedDiv'=> 'blogmail-subscribedDiv',
-            'textInput'=> 'blogmail-textInput',
-            'submitInput'=> 'blogmail-submitInput',
-            'bottomDiv'=> 'blogmail-bottomDiv',
-          ]
-        ]) ?>
+        <?php
+        echo json_encode(
+            [
+				'newsletterId' => $newsletter_id,
+				'classes' => [
+					'a' => 'blogmail-a',
+					'form' => 'blogmail-form',
+					'formDiv' => 'blogmail-formDiv',
+					'label' => 'blogmail-label',
+					'subscribedDiv' => 'blogmail-subscribedDiv',
+					'textInput' => 'blogmail-textInput',
+					'submitInput' => 'blogmail-submitInput',
+					'bottomDiv' => 'blogmail-bottomDiv',
+				],
+            ]
+        )
+        ?>
       </script>
     </div>
     <script async src="https://blogmail.co/v1/bm.js"></script>
