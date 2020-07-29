@@ -35,4 +35,4 @@ activate:
 dist:
 	# yarn run build
 	rm -f blogmail.zip
-	zip -r blogmail.zip blogmail
+	zip -r blogmail.zip blogmail -x "*.DS_Store"
