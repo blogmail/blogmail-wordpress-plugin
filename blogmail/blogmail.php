@@ -18,7 +18,7 @@
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
  * Author:            blogmail
- * Author URI:        https://github.com/blogmail/blogmail-wordpress-plugin
+ * Author URI:        https://blogmail.co/
  * License:           MIT
  * License URI:       https://opensource.org/licenses/MIT
  * Text Domain:       blogmail

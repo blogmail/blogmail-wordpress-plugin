@@ -171,7 +171,7 @@ class Blogmail {
 		$plugin_public = new Blogmail_Public( $this->get_blogmail(), $this->get_version(), $this->get_newsletter_id() );
 
 		$this->loader->add_filter('the_content', $plugin_public, 'blogmail_template');
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles', 10000 );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
 	}

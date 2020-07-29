@@ -2,3 +2,55 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+.blogmail-form {
+  border-width: 1px;
+  border-radius: 0.5rem;
+  border-color: #cbd5e0;
+  border-style: solid;
+  padding: 0.5rem;
+}
+
+.blogmail-formDiv {
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blogmail-label {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+input[class~="blogmail-textInput"] {
+  flex-grow: 1;
+  font-size: 1.6rem;
+  letter-spacing: -0.015em;
+  margin: 0;
+  max-width: 100%;
+  padding: 1.5rem 1.8rem;
+  width: auto;
+}
+
+input[class~="blogmail-submitInput"] {
+  font-size: 1.6rem;
+  letter-spacing: -0.015em;
+  margin: 0;
+  max-width: 100%;
+  padding: 1.5rem 1.8rem;
+  width: auto
+}
+
+.blogmail-bottomDiv {
+  width: 100%;
+  padding: 0.5rem;
+  color: lightgray;
+  font-size: 1.5rem;
+}
+
+.blogmail-subscribedDiv {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
