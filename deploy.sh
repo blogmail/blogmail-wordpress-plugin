@@ -93,11 +93,11 @@ fi
 # echo "Checking version in main plugin file matches version in readme.txt file..."
 # echo
 
-# # Check version in readme.txt is the same as plugin file after translating both to Unix line breaks to work around grep's failure to identify Mac line breaks
-# PLUGINVERSION=$(grep -i "Version:" $PLUGINDIR/$MAINFILE | awk -F' ' '{print $NF}' | tr -d '\r')
-# echo "$MAINFILE version: $PLUGINVERSION"
-# READMEVERSION=$(grep -i "Stable tag:" $PLUGINDIR/readme.txt | awk -F' ' '{print $NF}' | tr -d '\r')
-# echo "readme.txt version: $READMEVERSION"
+# Check version in readme.txt is the same as plugin file after translating both to Unix line breaks to work around grep's failure to identify Mac line breaks
+PLUGINVERSION=$(grep -i "Version:" $PLUGINDIR/$MAINFILE | awk -F' ' '{print $NF}' | tr -d '\r')
+echo "$MAINFILE version: $PLUGINVERSION"
+READMEVERSION=$(grep -i "Stable tag:" $PLUGINDIR/readme.txt | awk -F' ' '{print $NF}' | tr -d '\r')
+echo "readme.txt version: $READMEVERSION"
 
 # if [ "$READMEVERSION" = "trunk" ]; then
 # 	echo "Version in readme.txt & $MAINFILE don't match, but Stable tag is trunk. Let's continue..."
