@@ -1,9 +1,9 @@
 === blogmail ===
 Contributors: blogmail
 Tags: newsletter, blogmail, blog
-Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
+Requires at least: 1.0.0
+Tested up to: 1.0.0
+Stable tag: 1.0.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
