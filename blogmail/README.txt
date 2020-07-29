@@ -1,9 +1,10 @@
 === blogmail ===
 Contributors: blogmail
 Tags: newsletter, blogmail, blog
-Requires at least: 1.0.0
-Tested up to: 1.0.0
-Stable tag: 1.0.0
+Requires at least: 5.1
+Tested up to: 5.4
+Requires PHP: 7.2
+Stable tag: 4.3
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -26,7 +27,13 @@ Add the RSS source for your blog to the [blogmail
 dashboard](https://blogmail.co/dashboard). By default this
 will be `https://<your-site-url>/?feed=rss`.
 
+== Screenshots ==
+
+== Frequently Asked Questions ==
+
 == Changelog ==
 
 = 1.0.0 =
 * Initial release.
+
+== Upgrade Notice ==
