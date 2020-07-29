@@ -36,7 +36,7 @@ will be `https://<your-site-url>/?feed=rss`.
 
 == Changelog ==
 
-= 1.0.1 =
+= 1.0.2 =
 * Minor deployment fixes.
 
 = 1.0.0 =
