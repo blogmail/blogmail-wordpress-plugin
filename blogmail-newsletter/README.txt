@@ -4,7 +4,7 @@ Tags: newsletter, blogmail, blog
 Requires at least: 5.1
 Tested up to: 5.4
 Requires PHP: 7.2
-Stable tag: 4.3
+Stable tag: 1.0.2
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
