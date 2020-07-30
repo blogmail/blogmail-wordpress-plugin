@@ -4,7 +4,7 @@ Tags: newsletter, blogmail, blog
 Requires at least: 5.1
 Tested up to: 5.4
 Requires PHP: 7.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -36,7 +36,7 @@ will be `https://<your-site-url>/?feed=rss`.
 
 == Changelog ==
 
-= 1.0.2 =
+= 1.0.3 =
 * Minor deployment fixes.
 
 = 1.0.0 =

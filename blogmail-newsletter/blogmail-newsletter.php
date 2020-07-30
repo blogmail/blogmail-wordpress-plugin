@@ -16,7 +16,7 @@
  * Plugin Name:       blogmail newsletter
  * Plugin URI:        https://github.com/blogmail/blogmail-wordpress-plugin
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            blogmail
  * Author URI:        https://blogmail.co/
  * License:           MIT
