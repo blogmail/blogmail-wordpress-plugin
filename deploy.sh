@@ -49,12 +49,12 @@ fi
 
 echo
 echo "Creating local copy of SVN repo trunk ..."
-svn checkout $SVNURL $SVNPATH --non-interactive --no-auth-cache --username=$SVNUSER --depth immediates
-svn update --quiet $SVNPATH/trunk --set-depth infinity --non-interactive --no-auth-cache --username=$SVNUSER
+svn checkout $SVNURL $SVNPATH --non-interactive --username=$SVNUSER --depth immediates
+svn update --quiet $SVNPATH/trunk --set-depth infinity --non-interactive --username=$SVNUSER
 
 # Check latest version tag on SVN and see if this version is a duplicate
 cd $SVNPATH
-TAGREVISION=`svn info $SVNURL/tags/$PLUGINVERSION --non-interactive --no-auth-cache --username=$SVNUSER | grep Revision | tr -d 'Revison: '`
+TAGREVISION=`svn info $SVNURL/tags/$PLUGINVERSION --non-interactive --username=$SVNUSER | grep Revision | tr -d 'Revison: '`
 
 if [ -z "$TAGREVISION" ]; then
     echo "No tag for $PLUGINVERSION yet. Continuing..."
@@ -96,7 +96,7 @@ cd $SVNPATH/trunk/
 svn status | grep -v "^.[ \t]*\..*" | grep "^\!" | awk '{print $2"@"}' | xargs svn del
 # Add all new files that are not set to be ignored
 svn status | grep -v "^.[ \t]*\..*" | grep "^?" | awk '{print $2"@"}' | xargs svn add
-svn commit --non-interactive --no-auth-cache --username=$SVNUSER -m "Preparing for $PLUGINVERSION release"
+svn commit --non-interactive --username=$SVNUSER -m "Preparing for $PLUGINVERSION release"
 
 echo "Updating WordPress plugin repo assets and committing"
 cd $SVNPATH/assets/
@@ -104,17 +104,17 @@ cd $SVNPATH/assets/
 svn status | grep -v "^.[ \t]*\..*" | grep "^\!" | awk '{print $2"@"}' | xargs svn del
 # Add all new files that are not set to be ignored
 svn status | grep -v "^.[ \t]*\..*" | grep "^?" | awk '{print $2"@"}' | xargs svn add
-svn update --non-interactive --no-auth-cache --username=$SVNUSER --accept mine-full $SVNPATH/assets/*
-svn commit --non-interactive --no-auth-cache --username=$SVNUSER -m "Updating assets"
+svn update --non-interactive --username=$SVNUSER --accept mine-full $SVNPATH/assets/*
+svn commit --non-interactive --username=$SVNUSER -m "Updating assets"
 
 echo "Creating new SVN tag and committing it"
 cd $SVNPATH
-svn update --quiet $SVNPATH/tags/$PLUGINVERSION --non-interactive --no-auth-cache --username=$SVNUSER
+svn update --quiet $SVNPATH/tags/$PLUGINVERSION --non-interactive --username=$SVNUSER
 svn copy --quiet trunk/ tags/$PLUGINVERSION/
 # Remove trunk folder from tag directory
-svn delete --force --quiet $SVNPATH/tags/$PLUGINVERSION/trunk
+svn delete --force --quiet $SVNPATH/tags/$PLUGINVERSION/trunk || true
 cd $SVNPATH/tags/$PLUGINVERSION
-svn commit --non-interactive --no-auth-cache --username=$SVNUSER -m "Tagging version $PLUGINVERSION"
+svn commit --non-interactive --username=$SVNUSER -m "Tagging version $PLUGINVERSION"
 
 echo "Removing temporary directory $SVNPATH"
 cd $SVNPATH
